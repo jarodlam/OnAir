@@ -9,9 +9,28 @@ import SwiftUI
 
 @main
 struct OnAirApp: App {
+    @StateObject var micMuteModel = MicMuteModel()
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        Settings {
+            EmptyView()
         }
+        
+        MenuBarExtra(
+            content: {
+                Text(String(micMuteModel.status.rawValue))
+                
+                Button(
+                    action: {
+                        NSApp.terminate(nil)
+                    }
+                ) {
+                    Text("Quit")
+                }
+            },
+            label: {
+                Text("OnAir")
+            }
+        )
     }
 }
