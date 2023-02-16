@@ -10,6 +10,12 @@ import SwiftUI
 @main
 struct OnAirApp: App {
     @StateObject var micMuteModel = MicMuteModel()
+    @State var iconOpacity = 1.0
+    
+    var foreverAnimation: Animation {
+        Animation.linear(duration: 2.0)
+            .repeatForever(autoreverses: false)
+    }
 
     var body: some Scene {
         Settings {
@@ -18,7 +24,14 @@ struct OnAirApp: App {
         
         MenuBarExtra(
             content: {
-                Text(String(micMuteModel.status.rawValue))
+                switch micMuteModel.status {
+                case .unknown:
+                    Text("No meeting detected")
+                case .muted:
+                    Text("Muted")
+                case .unmuted:
+                    Text("Unmuted")
+                }
                 
                 Button(
                     action: {
@@ -29,7 +42,14 @@ struct OnAirApp: App {
                 }
             },
             label: {
-                Text("OnAir")
+                switch micMuteModel.status {
+                case .unknown:
+                    Text("·")
+                case .muted:
+                    Text("🔴")
+                case .unmuted:
+                    Text("🟢")
+                }
             }
         )
     }
