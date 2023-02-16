@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A815F67299E32DD00A65694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D000538F299CE7BA007E7515 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D061F9FB299B569B0074EC74 /* OnAir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnAir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D061F9FE299B569B0074EC74 /* OnAirApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirApp.swift; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 		D061F9FD299B569B0074EC74 /* OnAir */ = {
 			isa = PBXGroup;
 			children = (
+				7A815F67299E32DD00A65694 /* Info.plist */,
 				D061F9FE299B569B0074EC74 /* OnAirApp.swift */,
 				D061FA00299B569B0074EC74 /* ContentView.swift */,
 				D061FA02299B569C0074EC74 /* Assets.xcassets */,
@@ -430,6 +432,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OnAir/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "On Air needs permission to view the Zoom mic status.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,6 +462,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OnAir/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "On Air needs permission to view the Zoom mic status.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

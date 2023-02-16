@@ -24,24 +24,17 @@ class MicMuteModel: ObservableObject {
     
     func getMuteStatus() -> MuteStatus {
         let script = NSAppleScript(source: """
-            tell application "System Events"
-                set zoomApp to first application process whose name contains "zoom.us"
-                if not (zoomApp exists) then return 0
-                
-                tell process "zoom.us"
-                    set meetingMenu to menu bar item "Meeting" of menu bar 1
-                    if not (meetingMenu exists) then return 0
-                    
-                    set meetingMenuItems to menu items of meetingMenu
-                    set unmuteMenuItem to item "Unmute Audio" of meetingMenuItems
-                    set muteMenuItem to item "Mute Audio" of meetingMenuItems
-                    
-                    if unmuteMenuItem exists then return 1
-                    if muteMenuItem exists then return 1
-                    
-                    return 0
-                end tell
+        tell application "System Events"
+            if not (process "zoom.us" exists) then return 0
+            tell process "zoom.us"
+                repeat with theMenuBar in menu bars
+                    if not (menu "Meeting" of menu bar 1 exists) then exist
+                    if menu item "Unmute Audio" of menu "Meeting" of menu bar 1 exists then return 1
+                    if menu item "Mute Audio" of menu "Meeting" of menu bar 1 exists then return 2
+                end repeat
             end tell
+        end tell
+        return 0
         """)!
         
         var error: NSDictionary?
