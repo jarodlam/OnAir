@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MenuBarIconColorView: View {
+struct MenuLabelIconView: View {
     var symbolName: String
     var color: NSColor
     
@@ -20,22 +20,22 @@ struct MenuBarIconColorView: View {
     }
 }
 
-struct MenuBarIconView: View {
+struct MenuLabelView: View {
     @StateObject var micMuteModel: MicMuteModel
     
     var body: some View {
         switch micMuteModel.status {
         case .unknown:
-            MenuBarIconColorView(symbolName: "mic", color: NSColor(.gray))
+            MenuLabelIconView(symbolName: "mic", color: NSColor(.gray))
         case .muted:
-            MenuBarIconColorView(symbolName: "mic.slash", color: NSColor(.red))
+            MenuLabelIconView(symbolName: "mic.slash", color: NSColor(.red))
         case .unmuted:
-            MenuBarIconColorView(symbolName: "mic.fill", color: NSColor(.green))
+            MenuLabelIconView(symbolName: "mic.fill", color: NSColor(.green))
         }
     }
 }
 
-struct MenuBarIconView_Previews: PreviewProvider {
+struct MenuLabelView_Previews: PreviewProvider {
     static var previews: some View {
         EmptyView()
     }
