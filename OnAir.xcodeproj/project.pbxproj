@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7AA6A91F299FA09E00D821ED /* MenuBarIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA6A91E299FA09E00D821ED /* MenuBarIconView.swift */; };
 		D061F9FF299B569B0074EC74 /* OnAirApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D061F9FE299B569B0074EC74 /* OnAirApp.swift */; };
 		D061FA01299B569B0074EC74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D061FA00299B569B0074EC74 /* ContentView.swift */; };
 		D061FA03299B569C0074EC74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D061FA02299B569C0074EC74 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		7A815F67299E32DD00A65694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7AA6A91E299FA09E00D821ED /* MenuBarIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarIconView.swift; sourceTree = "<group>"; };
 		D000538F299CE7BA007E7515 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D061F9FB299B569B0074EC74 /* OnAir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnAir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D061F9FE299B569B0074EC74 /* OnAirApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirApp.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				7A815F67299E32DD00A65694 /* Info.plist */,
 				D061F9FE299B569B0074EC74 /* OnAirApp.swift */,
+				7AA6A91E299FA09E00D821ED /* MenuBarIconView.swift */,
 				D061FA00299B569B0074EC74 /* ContentView.swift */,
 				D061FA02299B569C0074EC74 /* Assets.xcassets */,
 				D061FA07299B569C0074EC74 /* OnAir.entitlements */,
@@ -268,6 +271,7 @@
 			files = (
 				D061FA2A299B56D10074EC74 /* MicMuteModel.swift in Sources */,
 				D061FA01299B569B0074EC74 /* ContentView.swift in Sources */,
+				7AA6A91F299FA09E00D821ED /* MenuBarIconView.swift in Sources */,
 				D061F9FF299B569B0074EC74 /* OnAirApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

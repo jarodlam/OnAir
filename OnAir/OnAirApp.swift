@@ -10,7 +10,6 @@ import SwiftUI
 @main
 struct OnAirApp: App {
     @StateObject var micMuteModel = MicMuteModel()
-    @State var iconOpacity = 1.0
     
     var foreverAnimation: Animation {
         Animation.linear(duration: 2.0)
@@ -41,16 +40,7 @@ struct OnAirApp: App {
                     Text("Quit")
                 }
             },
-            label: {
-                switch micMuteModel.status {
-                case .unknown:
-                    Text("·")
-                case .muted:
-                    Text("🔴")
-                case .unmuted:
-                    Text("🟢")
-                }
-            }
+            label: {MenuBarIconView(micMuteModel: micMuteModel)}
         )
     }
 }
